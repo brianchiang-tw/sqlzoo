@@ -11,3 +11,13 @@ SELECT name, population, area
 FROM world
 WHERE(area > 3000000 AND population <= 250000000) OR
      (area <=3000000 AND population >  250000000)
+
+
+
+/*
+Another feasible solution in MySQL
+*/
+
+SELECT name, population, area
+FROM world
+WHERE area > 3000000 XOR population > 250000000
